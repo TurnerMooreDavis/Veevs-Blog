@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bourbon'
 #neat bourbon exension
 gem 'neat'
+#gem for file attachments
+gem 'paperclip'
+#amazon gem for paperclip attachments
+gem 'aws-sdk'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

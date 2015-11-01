@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151016031312) do
+ActiveRecord::Schema.define(version: 20151101195831) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
     t.string   "descriptions"
     t.string   "published_link"
     t.integer  "category_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
 end

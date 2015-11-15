@@ -13,10 +13,7 @@
   h2 {
     text-align: center;
   }
-  span {
-    top: 50%;
-    transform: translateY(-50%);
-  }
+
 
   #header {
     position: fixed;
@@ -28,6 +25,7 @@
     .logo {
       float: left;
       position: fixed;
+      border-radius: 50%;
       height: 3em;
       width: 4em;
       background-color: #46adf6;
@@ -63,11 +61,16 @@
       transform: translateY(-50%);
       .title {
         position: relative;
-        background-color: #46adb6;
         width: 10em;
         height: 10em;
         margin-left: auto;
         margin-right: auto;
+        img {
+          margin-top: 1em;
+          text-align: center;
+          width: 10em;
+          border-radius: 50%;
+        }
       }
 
       .welcome-buttons {
@@ -76,13 +79,14 @@
           display: inline-block;
           width: 10em;
           height: 3em;
+          border-radius: 15%;
           background-color: #46adb6;
         }
       }
     }
   }
 
-  #page2 {
+  #page2, #page4 {
     height: 20%;
     width: 100%;
     min-width: 65em;
@@ -108,12 +112,17 @@
         margin-right: 3em;
       }
       .column {
+        // im dope because im awesome background color
+        background-color: rgba(#54ff00, .3);
         text-align: center;
         position: relative;
         margin-top: 5em;
+        padding: 1em;
         width: 18em;
         min-height: 50em;
         border: solid white;
+        p {
+        }
         .trifecta {
           display: block;
 
@@ -141,7 +150,7 @@
     background-color: #46bd16;
 
     h1 {
-      border: solid white;
+      padding-top: 1em;
     }
     .container {
       width: 65em;
@@ -156,7 +165,6 @@
         display: inline-block;
         width: 20em;
         height: 40em;
-        border: solid white;
 
         li {
           margin: 4em;
@@ -167,8 +175,24 @@
         display: inline-block;
         width: 40em;
         height: 40em;
-        border: solid white
+
+        p {
+          margin: 2em;
+        }
       }
+    }
+  }
+  #footer {
+    text-align: center;
+
+    .social-media {
+      display: inline-block;
+      margin: 2em;
+    }
+    img {
+      display: inline-block;
+      text-align: center;
+      width: 12em;
     }
   }
 }

@@ -27,3 +27,17 @@ $(document).ready(function(){
       return false;
   });
 });
+
+$(function hideSocialMediaButtons(){
+  setTimeout(function(){
+    // $('.hidden-buttons').hide();
+  }, 10);
+});
+
+$(function clickIcon(){
+  $('.icon').on('click',function(){
+    var name = $(this).attr('data-name');
+    console.log(name);
+    $('.'+name+'-button').find('a').click();
+  });
+});

@@ -1,6 +1,12 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
+  def categories
+    @articles = Article.all
+    @categories = Category.all
+    @category = Category.new
+  end
+
   # GET /articles
   # GET /articles.json
   def index
@@ -33,6 +39,20 @@ class ArticlesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def create_category
+    @category = Category.new(category_params)
+
+    respond_to do |format|
+      if @category.save
+        format.html { redirect_to categories_path, notice: 'Article was successfully created.' }
+        format.json { render :show, status: :created, location: @category }
+      else
+        format.html { redirect_to categories_path}
+        format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -70,5 +90,9 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:name, :descriptions, :published_link, :category_id, :attachment)
+    end
+
+    def category_params
+      params.require(:category).permit(:name)
     end
 end

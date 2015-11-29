@@ -6,13 +6,12 @@ Rails.application.routes.draw do
 
   get 'client/about'
 
+  get 'client/order'
+
   get 'client/contact_me'
 
-  get '/categories' => 'articles#categories', as: "categories"
-
-  post '/create_category' => 'articles#create_category', as: 'create_category'
-
   resources :articles
+  resources :categories
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

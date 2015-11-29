@@ -1,16 +1,5 @@
 <div class='home'>
-  <div id='header'>
-    <img class='logo' src='/swirl-vector-logo.jpg'>
-    </img>
-    <div class='header-links'>
-      <a href='#'>Home</a>
-      <a href='#'>About</a>
-      <a href='#'>Portfolio</a>
-      <a href='#'>Order a Sample</a>
-      <a href='#'>Contact</a>
-      <a href='#'>Blog</a>
-    </div>
-  </div>
+  <%= render 'header' %>
   <div id='page1'>
     <div class='razzle-dazzle'>
       <h1 class='title'><strong>Dope Content!</strong>
@@ -89,27 +78,8 @@
       </div>
     </div>
   </div>
-  <div id='social-media'>
-    <img src='/facebook-symbol.png' class="icon" data-name="facebook"></img>
-    <img src='/twitter-link.png' class="icon" data-name='twitter'></img>
-    <img src='/linkedin-logo.png' class="icon" data-name='linkedin'></img>
-    <img src='/google-reg-trademark.png' class="icon" data-name='google'></img>
-    <div class='hidden-buttons'>
-      <div id="facebook-button" class='social-media'>
-        <%= facebook_button %>
-      </div>
-      <div id="linkedin-button" class='social-media'>
-      <%= linkedin_button %>
-    </div>
-    <div id="twitter-button" class='social-media'>
-      <%= twitter_button %>
-    </div>
-    <div id="google-button" class='social-media'>
-      <%= google_plus_button %>
-    </div>
-    </div>
-  </div>
+  <%= render 'social_media' %>
   <div id="contact-me">
-    
+
   </div>
 </div>

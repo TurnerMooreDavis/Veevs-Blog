@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151130003411) do
+ActiveRecord::Schema.define(version: 20151130012652) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
@@ -50,8 +50,10 @@ ActiveRecord::Schema.define(version: 20151130003411) do
     t.decimal  "price"
     t.string   "word_count"
     t.string   "topic"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.boolean  "title_tag"
+    t.boolean  "meta_description"
   end
 
 end

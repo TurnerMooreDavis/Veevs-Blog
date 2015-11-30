@@ -18,10 +18,7 @@
     <%= f.label :word_count %>
     <%= f.select(:word_count,['100','200','300','400']) %>
   </div>
-  <div class="sample-field">
-    <%= f.label :category_id %>
-    <%= f.number_field :category_id %>
-  </div>
+    <%= f.hidden_field :category_id, :value =>@category.id %>
   <div class="sample-field">
     <%= f.label :primery_keyword %>
     <%= f.text_field :primery_keyword %>
@@ -43,6 +40,16 @@
   <div class="sample-field">
     <%= f.label :notes %>
     <%= f.text_area :notes %>
+  </div>
+  <div class='sample-field'>
+    <%= f.label :title_tag %>
+    <span>Yes<%= f.radio_button :title_tag, "1" %></span>
+    <span>No<%= f.radio_button :title_tag, "0"  %></span>
+  </div>
+  <div class='sample-field'>
+    <%= f.label :meta_description %>
+    <span>Yes<%= f.radio_button :meta_description, "1" %></span>
+    <span>No<%= f.radio_button :meta_description, "0"  %></span>
   </div>
   <div class="sample-field">
     <%= f.label :email %>

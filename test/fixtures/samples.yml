@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_id: 1
+  primery_keyword: MyString
+  second_keyword: MyString
+  third_keyword: MyString
+  host_url: MyString
+  company_website: MyString
+  reference_urls: MyString
+  notes: MyText
+  email: MyString
+  price: 9.99
+  word_count: MyString
+  topic: MyString
+
+two:
+  category_id: 1
+  primery_keyword: MyString
+  second_keyword: MyString
+  third_keyword: MyString
+  host_url: MyString
+  company_website: MyString
+  reference_urls: MyString
+  notes: MyText
+  email: MyString
+  price: 9.99
+  word_count: MyString
+  topic: MyString

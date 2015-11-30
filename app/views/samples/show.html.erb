@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @sample.category_id %>
+</p>
+
+<p>
+  <strong>Primery keyword:</strong>
+  <%= @sample.primery_keyword %>
+</p>
+
+<p>
+  <strong>Second keyword:</strong>
+  <%= @sample.second_keyword %>
+</p>
+
+<p>
+  <strong>Third keyword:</strong>
+  <%= @sample.third_keyword %>
+</p>
+
+<p>
+  <strong>Host url:</strong>
+  <%= @sample.host_url %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @sample.company_website %>
+</p>
+
+<p>
+  <strong>Reference urls:</strong>
+  <%= @sample.reference_urls %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @sample.notes %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @sample.email %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sample.price %>
+</p>
+
+<p>
+  <strong>Word count:</strong>
+  <%= @sample.word_count %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @sample.topic %>
+</p>
+
+<%= link_to 'Edit', edit_sample_path(@sample) %> |
+<%= link_to 'Back', samples_path %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :samples
   root 'client#home'
 
   get 'client/home'

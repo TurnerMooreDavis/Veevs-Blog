@@ -1,9 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class='sample-page'>
+  <%= render 'client/header' %>
+  <div id='sample-show'>
+    <h1><%= @category.name %></h1>
+    <div class='container'>
+      <div class=left-column>
+        <%= image_tag @category.image %>
+        <p><%= @category.description %></p>
+      </div>
+      <div class='right-column'>
+        <div class= 'sample-form-container'>
+          <%= render '/samples/form.html.erb' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

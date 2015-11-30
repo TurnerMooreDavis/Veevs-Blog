@@ -1,0 +1,55 @@
+<%= form_for(@sample) do |f| %>
+  <% if @sample.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sample.errors.count, "error") %> prohibited this sample from being saved:</h2>
+
+      <ul>
+      <% @sample.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="sample-field">
+    <%= f.label :topic %>
+    <%= f.text_field :topic %>
+  </div>
+  <div class="sample-field">
+    <%= f.label :word_count %>
+    <%= f.select(:word_count,['100','200','300','400']) %>
+  </div>
+  <div class="sample-field">
+    <%= f.label :category_id %>
+    <%= f.number_field :category_id %>
+  </div>
+  <div class="sample-field">
+    <%= f.label :primery_keyword %>
+    <%= f.text_field :primery_keyword %>
+  </div>
+    <%= f.hidden_field :second_keyword %>
+    <%= f.hidden_field :third_keyword %>
+  <div class="sample-field">
+    <%= f.label :host_url %>
+    <%= f.text_field :host_url %>
+  </div>
+  <div class="sample-field">
+    <%= f.label :company_website %>
+    <%= f.text_field :company_website %>
+  </div>
+  <div class="sample-field">
+    <%= f.label :reference_urls %>
+    <%= f.text_field :reference_urls %>
+  </div>
+  <div class="sample-field">
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="sample-field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <%= f.hidden_field :price %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

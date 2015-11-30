@@ -6,8 +6,10 @@
       <div class='categories'>
         <% @categories.each do |cat| %>
           <div class='category-container'>
-            <%= image_tag cat.image %>
-            <h2><%= cat.name %></h2>
+            <%= link_to category_path(cat) do %>
+              <%= image_tag cat.image %>
+              <h2><%= cat.name %></h2>
+            <% end %>
           </div>
         <% end %>
       </div>

@@ -28,6 +28,8 @@ class SamplesController < ApplicationController
 
     respond_to do |format|
       if @sample.save
+        SampleMailer.new_sample_email.deliver_now
+        logger.info "sample mailer done"
         format.html { redirect_to @sample, notice: 'Sample was successfully created.' }
         format.json { render :show, status: :created, location: @sample }
       else

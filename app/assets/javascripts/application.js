@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function(){
@@ -37,7 +36,8 @@ $(function hideSocialMediaButtons(){
 $(function clickIcon(){
   $('.icon').on('click',function(){
     var name = $(this).attr('data-name');
-    console.log(name);
-    $('.'+name+'-button').find('a').click();
+    var link = $('#'+name+'-link').find('a');
+    console.log(link);
+    console.log(link.attr('href'));
   });
 });

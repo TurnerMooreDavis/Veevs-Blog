@@ -1,13 +1,19 @@
 <div class='order-page'>
   <%= render 'header' %>
   <div id='order-sample'>
-    <h1 class='sub-header'>Order a Sample Beiiiiiitch!!!s</h1>
+    <h1 class='sub-header'>Here's my Portfolio Beiiiiiitch!!!s</h1>
     <div class='container'>
       <div class='categories'>
         <% @categories.each do |cat| %>
           <div class='category-container'>
-            <%= link_to category_path(cat) do %>
+            <%= link_to category_path(cat), :class => "wrapper" do %>
+                <div class="text">
+                  <div class="bubble">
+                    <%= cat.description %>
+                  </div>
+                </div>
               <%= image_tag cat.image %>
+              </a>
               <h2><%= cat.name %></h2>
             <% end %>
           </div>

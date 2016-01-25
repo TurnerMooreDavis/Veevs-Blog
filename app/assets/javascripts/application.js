@@ -19,10 +19,9 @@ $(document).ready(function(){
   $('.welcome').append('<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>');
   $('.smooth').on('click', function() {
       $.smoothScroll({
-          scrollElement: $('body'),
-          scrollTarget: '#' + this.id
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
       });
-
       return false;
   });
 });

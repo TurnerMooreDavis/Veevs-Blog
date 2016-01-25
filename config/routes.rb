@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'client/about'
 
-  get 'client/order'
+  get 'client/portfolio'
 
   get 'client/contact_me'
 

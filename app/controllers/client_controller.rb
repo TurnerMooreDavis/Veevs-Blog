@@ -8,7 +8,7 @@ class ClientController < ApplicationController
   def contact_me
   end
 
-  def order
+  def portfolio
     @categories = Category.all
   end
 end

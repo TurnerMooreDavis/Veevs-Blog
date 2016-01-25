@@ -2,11 +2,17 @@
   <img class='logo' src='/swirl-vector-logo.jpg'>
   </img>
   <div class='header-links'>
-    <%= link_to "Home", client_home_path %>
-    <a href='#'>About</a>
-    <a href='#'>Portfolio</a>
-    <%= link_to "Portfolio", client_portfolio_path %>
-    <a href='#'>Contact</a>
-    <a href='#'>Blog</a>
+    <div class='link-container'>
+      <%= link_to "Home", client_home_path %>
+    </div>
+    <div class='link-container'>
+      <a href='#'>About</a>
+    </div>
+    <div class='link-container'>
+      <%= link_to "Portfolio", client_portfolio_path %>
+    </div>
+    <div class='link-container'>
+      <a href='#'>Contact</a>
+    </div>
   </div>
 </div>

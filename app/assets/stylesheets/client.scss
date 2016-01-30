@@ -1,9 +1,9 @@
 // Place all the styles related to the Client controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.home, .order-page, .sample-page {
+.home, .portfolio-page, .sample-page, .contact-me {
     font-family: Eurostile;
-    height: 500%;
+    // height: 500%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -76,14 +76,15 @@
       color: #23DD0F;
     }
     .razzle-dazzle {
+      padding-top: 15em;
       font-family: Eurostile;
       position: relative;
       width: 60em;
       height: 50em;
       margin-left: auto;
       margin-right: auto;
-      top: 60%;
-      transform: translateY(-50%);
+      // top: 60%;
+      // transform: translateY(-50%);
       .title {
         position: relative;
         width: 10em;
@@ -91,7 +92,7 @@
         margin-left: auto;
         margin-right: auto;
         img {
-          margin-top: 1em;
+          // margin-top: 1em;
           text-align: center;
           border-radius: 50%;
         }

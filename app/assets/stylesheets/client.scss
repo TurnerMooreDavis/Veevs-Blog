@@ -312,9 +312,29 @@
     margin-top: 5em;
     display: block;
     position: relative;
+    width: 100%;
+    .article-contents{
+      border: 2px solid #5B5B5B;
+    }
     .article {
+      width: 100%;
+      text-align: center;
+      background-color: #5B5B5B;
+
+      .article-collapse {
+        border: 5px solid black;
+        float: right;
+        display:block;
+      }
+      .article-info{
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
       .article-name {
         font-size: 20pt;
+        color: white;
+        width: 100%
       }
       .article-name:hover {
         cursor: pointer;

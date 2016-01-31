@@ -4,14 +4,14 @@
 
   <div class="articles-container">
     <% @articles.each do |article|%>
-      <div class="article" onClick="toggleArticle('<%= article.name %>')">
+      <div class="article" onClick="toggleArticle('<%= article.id %>')">
         <span class="article-name"><%=article.name %></span>
-        <span class="article-collapse" id="<%= article.name %>-collapse">
+        <span class="article-collapse" id="<%= article.id %>-collapse">
           <span class="arrowUp fa fa-chevron-up fa-lg" style="display:none"></span>
           <span class="arrowDown fa fa-chevron-down fa-lg"></span>
         </span>
       </div>
-      <div class="article-contents" id="<%= article.name %>-contents">
+      <div class="article-contents" id="<%= article.id %>-contents">
         <div class='article-info'>
           <div><%= article.descriptions %></div>
           <div><%= article.published_link %></div>

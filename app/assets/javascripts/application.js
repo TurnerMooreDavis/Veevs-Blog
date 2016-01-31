@@ -36,10 +36,10 @@ $(function hideSocialMediaButtons(){
   }, 10);
 });
 
-function toggleArticle(articleName) {
-  $("#"+articleName+"-contents").slideToggle();
-  $("#"+articleName+"-collapse .arrowUp").toggle();
-  $("#"+articleName+"-collapse .arrowDown").toggle();
+function toggleArticle(articleId) {
+  $("#"+articleId+"-contents").slideToggle();
+  $("#"+articleId+"-collapse .arrowUp").toggle();
+  $("#"+articleId+"-collapse .arrowDown").toggle();
 }
 
 $(function clickIcon(){

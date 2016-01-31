@@ -1,17 +1,22 @@
-<div class='sample-page'>
+<div class='articles-page'>
   <%= render 'client/header' %>
-  <div id='sample-show'>
-    <h1><%= @category.name %></h1>
-    <div class='container'>
-      <div class=left-column>
-        <%= image_tag @category.image %>
-        <p><%= @category.description %></p>
+
+
+  <div class="articles-container">
+    <% @articles.each do |article|%>
+      <div class="article" onClick="toggleArticle('<%= article.name %>')">
+        <span class="article-name"><%=article.name %></span>
+        <span class="article-collapse" id="<%= article.name %>-collapse">
+          <span class="arrowUp fa fa-chevron-up fa-lg" style="display:none"></span>
+          <span class="arrowDown fa fa-chevron-down fa-lg"></span>
+        </span>
       </div>
-      <div class='right-column'>
-        <div class= 'sample-form-container'>
-          <%= render '/samples/form.html.erb' %>
-        </div>
+      <div class="article-contents" id="<%= article.name %>-contents">
+        <div><%= article.descriptions %></div>
+        <div><%= article.published_link %></div>
+        <div><%= image_tag article.attachment %></div>
+        <div><%= link_to article.attachment %></div>
       </div>
-    </div>
-  </div>
-</div>
+    <% end %>
+   </div>
+ </div>

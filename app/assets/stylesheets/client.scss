@@ -1,7 +1,7 @@
 // Place all the styles related to the Client controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.home, .portfolio-page, .sample-page, .contact-me {
+.home, .portfolio-page, .articles-page, .contact-me {
     font-family: Eurostile;
     // height: 500%;
     width: 100%;
@@ -304,6 +304,20 @@
         p {
           margin: 2em;
         }
+      }
+    }
+  }
+
+  .articles-container{
+    margin-top: 5em;
+    display: block;
+    position: relative;
+    .article {
+      .article-name {
+        font-size: 20pt;
+      }
+      .article-name:hover {
+        cursor: pointer;
       }
     }
   }

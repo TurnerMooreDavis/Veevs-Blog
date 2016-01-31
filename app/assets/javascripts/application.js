@@ -36,6 +36,27 @@ $(function hideSocialMediaButtons(){
   }, 10);
 });
 
+$(function dropDownArrows() {
+  var dropDownArrows = '.drop-down-arrows, .drop-down-label';
+  if ($(window).width() <= 768) {
+    var dropDownArrows= '.drop-down-arrows, .drop-down-label, .drop-down-label-phone';
+  }
+  $(dropDownArrows).on('click', function() {
+    var dropDown = $(this).parent().find('.drop-down-content'),
+        arrowDown = $(this).parent().find('.arrow-down'),
+        arrowUp = $(this).parent().find('.arrow-up');
+    dropDown.slideToggle();
+    arrowDown.toggle();
+    arrowUp.toggle();
+  });
+});
+
+function toggleArticle(articleName) {
+  $("#"+articleName+"-contents").slideToggle();
+  $("#"+articleName+"-collapse .arrowUp").toggle();
+  $("#"+articleName+"-collapse .arrowDown").toggle();
+}
+
 $(function clickIcon(){
   $('.icon').on('click',function(){
     var name = $(this).attr('data-name');

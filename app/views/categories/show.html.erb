@@ -15,7 +15,7 @@
         <div><%= article.descriptions %></div>
         <div><%= article.published_link %></div>
         <div><%= image_tag article.attachment.url %></div>
-        <div><%= link_to article.attachment.url%></div>
+        <div><%= link_to "#{article.name} image", article.attachment.url%></div>
       </div>
     <% end %>
    </div>

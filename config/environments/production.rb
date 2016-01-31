@@ -3,12 +3,15 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
+
+  #set up paperclip s3 image server
   config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['VEEVS_BUCKET_NAME'],
-    :access_key_id => ENV['VEEVS_AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['VEEVS_AWS_SECRET_ACCESS_KEY']
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['VEEVS_BUCKET_NAME'],
+      :access_key_id => ENV['VEEVS_AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['VEEVS_AWS_SECRET_ACCESS_KEY']
+    }
   }
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

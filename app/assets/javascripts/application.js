@@ -24,6 +24,10 @@ $(document).ready(function(){
       });
       return false;
   });
+  $('#facebook-link').find('a').html("<img src='/facebook-symbol.png' class='icon' ></img>");
+  $('#twitter-link').find('a').html("<img src='/twitter-link.png' class='icon'></img>");
+  $('#linkedin-link').find('a').html("<img src='/linkedin-logo.png' class='icon'></img>");
+  $('#google-link').find('a').html("<img src='/google-reg-trademark.png' class='icon'></img>");
 });
 
 $(function hideSocialMediaButtons(){

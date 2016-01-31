@@ -1,23 +1,15 @@
 <div id='social-media'>
-  <a href='www.google.com'><img src='/facebook-symbol.png' class="icon" data-name="facebook" data-link='<%= facebook_button :static_link => true %>'></img></a>
-  <img src='/twitter-link.png' class="icon" data-name='twitter' data-link='<%= twitter_button :static_link => true %>'></img>
-  <img src='/linkedin-logo.png' class="icon" data-name='linkedin' data-link='<%= linkedin_button :static_link => true %>'></img>
-  <img src='/google-reg-trademark.png' class="icon" data-name='google' data-link='<%= google_plus_button :static_link => true %>'></img>
-  <div class='hidden-buttons'>
-    <div id="facebook-button" class='social-media'>
-      <%= facebook_button %>
-    </div>
-    <div id="linkedin-button" class='social-media'>
-    <%= linkedin_button %>
+  <div id="facebook-link">
+    <%= facebook_button :static_link => true %>
   </div>
-  <div id="twitter-button" class='social-media'>
-    <%= twitter_button %>
+  <div id='twitter-link'>
+    <%= twitter_button :static_link => true %>
   </div>
-  <div id="google-button" class='social-media'>
-    <%= google_plus_button %>
+  <div id='linkedin-link'>
+    <%= linkedin_button :static_link => true %>
+  </div>
+  <div id="google-link">
+    <%= google_plus_button :static_link => true %>
   </div>
   </div>
-</div>
-<div id="facebook-link">
-  <%= facebook_button :static_link => true %>
 </div>

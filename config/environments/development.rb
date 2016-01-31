@@ -7,9 +7,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['VEEVS_BUCKET_NAME_DEV'],
-    :access_key_id => ENV['VEEVS_AWS_ACCESS_KEY_ID_DEV'],
-    :secret_access_key => ENV['VEEVS_AWS_SECRET_ACCESS_KEY_DEV']
+    :bucket => 'veevs-samples-dev',
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY_ID']
   }
 }
   config.cache_classes = false

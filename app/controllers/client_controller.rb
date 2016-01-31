@@ -6,6 +6,7 @@ class ClientController < ApplicationController
   end
 
   def contact_me
+    @message = Message.new
   end
 
   def portfolio

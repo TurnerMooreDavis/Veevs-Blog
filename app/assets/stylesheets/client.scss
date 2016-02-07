@@ -310,7 +310,8 @@
   .category-name {
     width:100%;
     height: 3em;
-    margin-top: 3em;
+    margin-top: 4em;
+    min-width:65em;
   }
   .articles-container{
     display: block;
@@ -329,7 +330,7 @@
       .article-name {
         font-size: 25pt;
         color: white;
-        width: 100%
+        width: 100%;
       }
       .article-name:hover {
         cursor: pointer;

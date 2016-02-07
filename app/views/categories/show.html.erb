@@ -1,7 +1,8 @@
 <div class='articles-page'>
   <%= render 'client/header' %>
-
-<h1 class='category-name'><%= @category.name %> Articles </h1>
+<div class='category-name'>
+  <h1><%= @category.name %> Articles </h1>
+</div>
   <div class="articles-container">
     <% @articles.each do |article|%>
       <div class="article-title" onClick="toggleArticle('<%= article.id %>')">

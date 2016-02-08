@@ -36,6 +36,10 @@ $(function hideSocialMediaButtons(){
   }, 10);
 });
 
+$('#contact-me').on('form:ajax:success',function(){
+  console.log('ajax success');
+});
+
 function toggleArticle(articleId) {
   $("#"+articleId+"-contents").slideToggle();
   $("#"+articleId+"-collapse .arrowUp").toggle();

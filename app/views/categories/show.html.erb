@@ -4,12 +4,13 @@
   <h1><%= @category.name %> Articles </h1>
 </div>
   <div class="articles-container">
-    <% @articles.each do |article|%>
+    <% @articles.each_with_index do |article, i|%>
+      <% if i==0 %>
       <div class="article-title" onClick="toggleArticle('<%= article.id %>')">
         <span class="article-name"><%=article.name %></span>
         <span class="article-collapse" id="<%= article.id %>-collapse">
-          <i class="arrowUp fa fa-chevron-up" style="display:none"></i>
-          <i class="arrowDown fa fa-chevron-down"></i>
+          <i class="arrowUp fa fa-chevron-up"></i>
+          <i class="arrowDown fa fa-chevron-down" style="display:none"></i>
         </span>
       </div>
       <div class="article-contents" id="<%= article.id %>-contents">
@@ -23,6 +24,27 @@
         </div>
         <div class='article-image'><%= image_tag article.attachment.url %></div>
       </div>
+      <% else %>
+      <div class="article-title" onClick="toggleArticle('<%= article.id %>')">
+        <span class="article-name"><%=article.name %></span>
+        <span class="article-collapse" id="<%= article.id %>-collapse">
+          <i class="arrowUp fa fa-chevron-up" style="display:none"></i>
+          <i class="arrowDown fa fa-chevron-down"></i>
+        </span>
+      </div>
+      <div class="article-contents" id="<%= article.id %>-contents" style='display:none;'>
+        <div class='article-info'>
+          <span class='article-detail'>
+            <h2>Description:</h2><div><%= article.descriptions %></div>
+          </span>
+          <span class='article-detail'>
+            <h2>Published Link:</h2><div><%= link_to article.published_link %></div>
+          </span>
+        </div>
+        <div class='article-image'><%= image_tag article.attachment.url %></div>
+      </div>
+      <% end %>
+
     <% end %>
    </div>
  </div>

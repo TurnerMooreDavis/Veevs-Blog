@@ -1,4 +1,8 @@
-console.log('ive returned!!!');
-var response = "<div style='float:right; display:none'>I will Contact you soon.  Thanks!</div>"
-$('.contact-button').replaceWith("<div style='float:right; display:none' class='response'>I will Contact you soon.  Thanks!</div>");
+// if(<%= @status %> == '200') {
+  $('.contact-button').replaceWith("<div style='float:right; display:none' class='response'>I will Contact you soon.  Thanks!</div>");
+// } else {
+  // $('.contact-button').replaceWith("<div style='float:right; display:none' class='response'>There was an Error.  Please come back and try again soon.</div>");
+// }
+
 $('.response').fadeIn(1000);
+$('#new_message').find('input, textarea').val('');

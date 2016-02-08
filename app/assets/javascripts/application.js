@@ -30,16 +30,6 @@ $(document).ready(function(){
   $('#google-link').find('a').html("<img src='/google-reg-trademark.png' class='icon'></img>");
 });
 
-$(function hideSocialMediaButtons(){
-  setTimeout(function(){
-    // $('.hidden-buttons').hide();
-  }, 10);
-});
-
-$('#contact-me').on('form:ajax:success',function(){
-  console.log('ajax success');
-});
-
 function toggleArticle(articleId) {
   $("#"+articleId+"-contents").slideToggle();
   $("#"+articleId+"-collapse .arrowUp").toggle();

@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :users do
+    collection do
+      get 'users/login'
+      post 'users/check_user'
+    end
+  end
   resources :messages
   resources :samples
   root 'client#home'
-
+  
   get 'client/home'
 
   get 'client/about'

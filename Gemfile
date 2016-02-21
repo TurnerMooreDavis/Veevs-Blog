@@ -30,6 +30,9 @@ gem 'neat'
 gem 'paperclip'
 #amazon gem for paperclip attachments
 gem 'aws-sdk'
+#gem for emails ending
+gem "aws-ses", "~> 0.5.0", :require => 'aws/ses'
+
 
 group :production do
   gem 'pg'

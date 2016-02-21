@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :users do
-    collection do
-      get 'users/login'
-      post 'users/check_user'
-    end
-  end
+  resources :users
   resources :messages
   resources :samples
+  get '/login' => 'users#login', :as => 'login'
+  post '/check_user' => 'users#check_user', :as => 'check_user'
   root 'client#home'
-  
+
   get 'client/home'
 
   get 'client/about'

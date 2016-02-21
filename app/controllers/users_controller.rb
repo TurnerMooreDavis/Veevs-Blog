@@ -25,12 +25,12 @@ class UsersController < ApplicationController
   end
 
   def check_user
-    user = User.where(name: params[:name], password_digest: params[:password])
-    if user.exists?
+    user = User.where(name: params[:name], password_digest: params[:password]).first()
+    if user.blank?
+      redirect_to login_path, :notice => 'please try again'
+    else
       session[:conty_user_id] = user.id
       redirect_to categories_path, :notice => 'successfully logged in'
-    else
-      redirect_to user_login_path, :notice => 'please try again'
     end
   end
   # POST /users

@@ -26,6 +26,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @status == 500
+    SampleMailer.new_sample_email.deliver_now
     respond_to do |format|
       # if @message.save
       #   format.js

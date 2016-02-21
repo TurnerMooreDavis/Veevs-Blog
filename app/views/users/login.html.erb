@@ -1,4 +1,10 @@
-<%= form_tag do %>
-  <% text_field_tag :name %>
-  <% password_tag :password %>
+
+<h1>Please Log In </h1>
+<h2><%= notice %></h2>
+<%= form_tag(:controller => "users", :action => "check_user") do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%= submit_tag %>
 <% end %>

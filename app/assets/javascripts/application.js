@@ -14,21 +14,21 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(document).ready(function(){
-  $('.welcome').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>')
-  $('.welcome').append('<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>');
-  $('.smooth').on('click', function() {
-      $.smoothScroll({
-        scrollElement: $('body'),
-        scrollTarget: '#' + this.id
-      });
-      return false;
-  });
-  $('#facebook-link').find('a').html("<img src='/facebook-symbol.png' class='icon' ></img>");
-  $('#twitter-link').find('a').html("<img src='/twitter-link.png' class='icon'></img>");
-  $('#linkedin-link').find('a').html("<img src='/linkedin-logo.png' class='icon'></img>");
-  $('#google-link').find('a').html("<img src='/google-reg-trademark.png' class='icon'></img>");
-});
+// $(document).ready(function(){
+//   $('.welcome').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>')
+//   $('.welcome').append('<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>');
+//   $('.smooth').on('click', function() {
+//       $.smoothScroll({
+//         scrollElement: $('body'),
+//         scrollTarget: '#' + this.id
+//       });
+//       return false;
+//   });
+//   $('#facebook-link').find('a').html("<img src='/facebook-symbol.png' class='icon' ></img>");
+//   $('#twitter-link').find('a').html("<img src='/twitter-link.png' class='icon'></img>");
+//   $('#linkedin-link').find('a').html("<img src='/linkedin-logo.png' class='icon'></img>");
+//   $('#google-link').find('a').html("<img src='/google-reg-trademark.png' class='icon'></img>");
+// });
 
 function toggleArticle(articleId) {
   $("#"+articleId+"-contents").slideToggle();
@@ -42,5 +42,22 @@ $(function clickIcon(){
     var link = $('#'+name+'-link').find('a');
     console.log(link);
     console.log(link.attr('href'));
+  });
+});
+
+$(function initialize(){
+  $('#page1:not(.title)').fadeTo(2500,0.6);
+  $('.title').fadeTo(2500, 1, function(){
+    $('#creativity').fadeTo(1300,1,function(){
+      $('#craftsmanship').fadeTo(1150,1, function(){
+        $('#consistancy').fadeTo(1000,1, function(){
+          console.log('animation complete');
+        });
+      });
+    });
+  });
+  $(document).one('scroll', function(){
+    $('#header').fadeIn(400);
+    console.log('scrolling');
   });
 });

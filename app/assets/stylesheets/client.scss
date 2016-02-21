@@ -24,12 +24,13 @@
 
 
   #header {
+    display: none;
     position: fixed;
     z-index: 1000;
     width: 100%;
     min-width: 65em;
     height: 3em;
-    background-color: #23DD0F;
+    background-color: #008000;
     .logo {
       float: left;
       position: fixed;
@@ -52,14 +53,14 @@
         // background-color: #A1A1A1;
         a {
           // background-color: #A1A1A1;
-          // color: #23DD0F;
+          // color: #008000;
 
         }
       }
       .link-container {
         display: inline-block;
         a {
-          color: #FFFFFF;
+          color: #ffffff;
           position: inline-block;
           margin: 3em;
           text-decoration: none;
@@ -87,40 +88,38 @@
     background-image: url('/conty_content.jpg');
     background-size: cover;
     div {
-      color: #23DD0F;
+      color: #008000;
     }
-    .razzle-dazzle {
-      padding-top: 15em;
-      font-family: Eurostile;
+  }
+  .razzle-dazzle {
+    z-index: 10;
+    top: 15em;
+    font-family: Eurostile;
+    position: absolute;
+    width: 60em;
+    height: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    // top: 60%;
+    // transform: translateY(-50%);
+    .title {
+      color: #008000;
+      display: none;
       position: relative;
-      width: 60em;
-      height: 50em;
+      width: 10em;
       margin-left: auto;
       margin-right: auto;
-      // top: 60%;
-      // transform: translateY(-50%);
-      .title {
-        position: relative;
-        width: 10em;
-        height: 10em;
-        margin-left: auto;
-        margin-right: auto;
-        img {
-          // margin-top: 1em;
-          text-align: center;
-          border-radius: 50%;
-        }
-      }
-
-      .welcome-buttons {
+      font-size: 70pt;
+      img {
+        // margin-top: 1em;
         text-align: center;
-        .button {
-          display: none;
-          width: 10em;
-          height: 3em;
-          border-radius: 15%;
-          background-color: #23DD0F;
-        }
+        border-radius: 50%;
+      }
+    }
+    .subtitle {
+      color: #008000;
+      span{
+        opacity: 0.0;
       }
     }
   }
@@ -250,11 +249,13 @@
           margin-left: auto;
           margin-right: auto;
           img {
+            width: 20em;
             margin-right: auto;
             margin-left: auto;
             z-index:1;
-            border-radius: 50%;
-            background-color: #0FA100;
+            // border-radius: 50%;
+            background-color: #ffffff;
+            // #0FA100;
           }
           .wrapper {
               position: relative;

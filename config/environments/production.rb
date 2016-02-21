@@ -27,13 +27,6 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :amazon_ses
-  config.action_mailer.smtp_settings = {
-    :address => "email-smtp.us-west-2.amazonaws.com",
-    :user_name            => ENV["SES_USER"],
-    :password             => ENV["SES_PASSWORD"],
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  }
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like

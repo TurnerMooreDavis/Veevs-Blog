@@ -1,10 +1,8 @@
 <div id='header'>
-  <img class='logo' src='/swirl-vector-logo.jpg'>
-  </img>
+  <%= link_to client_home_path  do %>
+    <img class='logo' src='/swirl-vector-logo.jpg'/>
+  <% end %>
   <div class='header-links'>
-    <div class='link-container'>
-      <%= link_to "Home", client_home_path %>
-    </div>
     <div class='link-container'>
       <%= link_to "About", client_about_path %>
     </div>

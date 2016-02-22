@@ -24,7 +24,6 @@
 
 
   #header {
-    display: none;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -42,7 +41,7 @@
     }
     .header-links {
       font-weight: bold;
-      font-size: 17pt;
+      font-size: 150%;
       margin-top: 1em;
       float: right;
       :hover{
@@ -92,7 +91,7 @@
     }
   }
   .razzle-dazzle {
-    z-index: 10;
+    z-index: 5;
     top: 15em;
     font-family: Eurostile;
     position: absolute;
@@ -100,16 +99,16 @@
     height: 50em;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     // top: 60%;
     // transform: translateY(-50%);
     .title {
       color: #008000;
       display: none;
       position: relative;
-      width: 10em;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 70pt;
+      // width: 10em;
+      // margin-right: auto;
+      font-size: 500%;
       img {
         // margin-top: 1em;
         text-align: center;
@@ -117,6 +116,8 @@
       }
     }
     .subtitle {
+      position: relative;
+      margin-right:auto;
       color: #008000;
       span{
         opacity: 0.0;
@@ -140,43 +141,27 @@
     height: 20%;
     width: 100%;
     min-width: 65em;
-    min-height: 55em;
+    min-height: 45em;
     position: relative;
     color: black;
     background-color: white;
+    text-align: center;
     .column-container {
+      margin-top: 5em;
       position: relative;
-      width: 60em;
-      height: 50em;
+      width: 65em;
       margin-left: auto;
       margin-right: auto;
-      .right {
-        float: right;
-      }
-      .left {
-        float: left;
-      }
-      .center {
-        display: inline-block;
-        margin-left: 3em;
-        margin-right: 3em;
-      }
-      .column {
-        box-shadow: 10px 10px 5px #888888;
-
-        // im dope because im awesome background color
-        // background-color: rgba(#2B8888, .3);
-        background-color: #0FA100;
-        text-align: center;
-        position: relative;
-        margin-top: 5em;
-        padding: 1em;
-        width: 18em;
-        min-height: 50em;
-        p {
-        }
-        .trifecta {
-          display: block;
+      .row{
+        .card {
+          opacity: 0;
+          width: 17em;
+          height: 17em;
+          box-shadow: 10px 10px 5px #888888;
+          background-color: #008000;
+          display: inline-block;
+          padding: 1em;
+          margin: 1em;
           .circle-img {
             border-radius: 50%;
             width: 50%;
@@ -184,8 +169,6 @@
 
           h1 {
             font-weight: bold;
-          }
-          p {
           }
         }
       }
@@ -310,7 +293,7 @@
         margin-right:5em;
 
         .contact-form {
-          font-size: 15pt;
+          font-size: 120%;
           float: right;
           .contact-entry {
             margin: 1em;
@@ -387,7 +370,7 @@
         padding-right: 5px;
       }
       .article-name {
-        font-size: 25pt;
+        font-size: 500%;
         color: white;
         width: 100%;
       }
@@ -404,8 +387,8 @@
     .article-contents {
       // border: 2px solid #5B5B5B;
       margin: 3em;
-      background-color: green;
-      border: 2px solid green;
+      background-color: #008000;
+      border: 2px solid #008000;
       box-shadow: 10px 10px 5px #888888;
       .article-info{
         text-align: center;
@@ -492,7 +475,7 @@
         overflow: hidden;
         position: relative;
         text-align: left;
-        font-size: 25pt;
+        font-size: 150%;
         img {
           margin: 1em;
           float: left;
@@ -510,4 +493,10 @@
 
   }
 
+}
+
+.home {
+  #header {
+    display: none;
+  }
 }

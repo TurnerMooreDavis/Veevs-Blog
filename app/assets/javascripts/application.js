@@ -14,21 +14,21 @@
 //= require jquery_ujs
 //= require_tree .
 
-// $(document).ready(function(){
-//   $('.welcome').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>')
-//   $('.welcome').append('<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>');
-//   $('.smooth').on('click', function() {
-//       $.smoothScroll({
-//         scrollElement: $('body'),
-//         scrollTarget: '#' + this.id
-//       });
-//       return false;
-//   });
-//   $('#facebook-link').find('a').html("<img src='/facebook-symbol.png' class='icon' ></img>");
-//   $('#twitter-link').find('a').html("<img src='/twitter-link.png' class='icon'></img>");
-//   $('#linkedin-link').find('a').html("<img src='/linkedin-logo.png' class='icon'></img>");
-//   $('#google-link').find('a').html("<img src='/google-reg-trademark.png' class='icon'></img>");
-// });
+$(document).ready(function(){
+  $('.welcome').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>')
+  $('.welcome').append('<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>');
+  $('.smooth').on('click', function() {
+      $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+      });
+      return false;
+  });
+  $('#facebook-link').find('a').html("<img src='/facebook-symbol.png' class='icon' ></img>");
+  $('#twitter-link').find('a').html("<img src='/twitter-link.png' class='icon'></img>");
+  $('#linkedin-link').find('a').html("<img src='/linkedin-logo.png' class='icon'></img>");
+  $('#google-link').find('a').html("<img src='/google-reg-trademark.png' class='icon'></img>");
+});
 
 function toggleArticle(articleId) {
   $("#"+articleId+"-contents").slideToggle();
@@ -46,7 +46,7 @@ $(function clickIcon(){
 });
 
 $(function initialize(){
-  $('#page1:not(.title)').fadeTo(2500,0.6);
+  $('#page1').fadeTo(2500,0.6);
   $('.title').fadeTo(2500, 1, function(){
     $('#creativity').fadeTo(1300,1,function(){
       $('#craftsmanship').fadeTo(1150,1, function(){
@@ -60,4 +60,29 @@ $(function initialize(){
     $('#header').fadeIn(400);
     console.log('scrolling');
   });
+});
+
+$(function fadeInCards(){
+  $(window).scroll( function(){
+
+       /* Check the location of each desired element */
+       $('.row').each( function(i){
+
+           var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+           var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+           /* If the object is completely visible in the window, fade it it */
+           if( bottom_of_window > bottom_of_object-100 ){
+                var row = $(this);
+                row.find("#1").animate({'opacity':'1'},400,function(){
+                  row.find("#2").animate({'opacity':'1'},400,function(){
+                    row.find("#3").animate({'opacity':'1'},400,function(){
+                    });
+                  });
+                });
+           }
+
+       });
+
+   });
 });

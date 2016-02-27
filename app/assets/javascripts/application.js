@@ -73,13 +73,15 @@ $(function fadeInCards(){
 
            /* If the object is completely visible in the window, fade it it */
            if( bottom_of_window > bottom_of_object-100 ){
-                var row = $(this);
-                row.find("#1").animate({'opacity':'1'},400,function(){
-                  row.find("#2").animate({'opacity':'1'},400,function(){
-                    row.find("#3").animate({'opacity':'1'},400,function(){
-                    });
-                  });
-                });
+            var row = $(this);
+
+            row.find("#1").animate({'opacity':'1'},2000);
+            setTimeout(function(){
+              row.find("#2").animate({'opacity':'1'},2000);
+                setTimeout(function(){
+                  row.find("#3").animate({'opacity':'1'},2000);
+                },400);
+              },400);
            }
 
        });

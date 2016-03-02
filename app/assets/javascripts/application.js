@@ -69,15 +69,11 @@ $(function fadeInShortCards(){
   var animation1complete = false;
   var animation2complete = false;
   var animation3complete = false;
-  var bottom_of_object1 = 0
-  var bottom_of_object2 = 0
-  var bottom_of_object3 = 0
+  bottom_of_object1 = row1.offset().top + row1.outerHeight();
+  bottom_of_object2 = row2.offset().top + row2.outerHeight();
+  bottom_of_object3 = row3.offset().top + row3.outerHeight();
   $(window).scroll( function(){
-    var animation1complete = false;
        /* Check the location of each desired element */
-    bottom_of_object1 = row1.offset().top + row1.outerHeight();
-    bottom_of_object2 = row2.offset().top + row2.outerHeight();
-    bottom_of_object3 = row3.offset().top + row3.outerHeight();
     var bottom_of_window = $(window).scrollTop() + $(window).height();
     /* If the object is completely visible in the window, fade it it */
     if( animation1complete != true && bottom_of_window > bottom_of_object1-100 ){

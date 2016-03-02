@@ -24,10 +24,10 @@ $(document).ready(function(){
       });
       return false;
   });
-  $('#facebook-link').find('a').html("<img src='/facebook-symbol.png' class='icon' ></img>");
-  $('#twitter-link').find('a').html("<img src='/twitter-link.png' class='icon'></img>");
-  $('#linkedin-link').find('a').html("<img src='/linkedin-logo.png' class='icon'></img>");
-  $('#google-link').find('a').html("<img src='/google-reg-trademark.png' class='icon'></img>");
+  $('#facebook-link').find('a').html("<i class='fa fa-facebook-square fa-5x' style='color: #408000'>");
+  $('#twitter-link').find('a').html('<i class="fa fa-twitter-square fa-5x" style="color: #408000"></i>');
+  $('#linkedin-link').find('a').html('<i class="fa fa-linkedin-square fa-5x" style="color: #408000"></i>');
+  $('#google-link').find('a').html('<i class="fa fa-google-plus-square fa-5x" style="color: #408000"></i>');
 });
 
 function toggleArticle(articleId) {
@@ -40,53 +40,72 @@ $(function clickIcon(){
   $('.icon').on('click',function(){
     var name = $(this).attr('data-name');
     var link = $('#'+name+'-link').find('a');
-    console.log(link);
-    console.log(link.attr('href'));
   });
 });
 
 $(function initialize(){
-  console.log("loaded");
   $('#page1').fadeTo(2500, 0.6);
   $('.title').fadeTo(2500, 1, function(){
     $('#creativity').fadeTo(1300,1,function(){
       $('#craftsmanship').fadeTo(1150,1, function(){
         $('#consistancy').fadeTo(1000,1, function(){
-          console.log('animation complete');
         });
       });
     });
   });
   $(document).one('scroll', function(){
     $('#header').fadeIn(400);
-    console.log('scrolling');
   });
 });
 
-$(function fadeInCards(){
+$(function fadeInShortCards(){
+  var jRows = document.getElementsByClassName("tall card");
+  $(jRows).each(function(i,el){
+    el.style.webkitAnimationPlayState = "paused";
+  })
+  var row1 = $('.row.short.1');
+  var row2 = $('.row.short.2');
+  var row3 = $('.row.tall');
+  var animation1complete = false;
+  var animation2complete = false;
+  var animation3complete = false;
+  var bottom_of_object1 = 0
+  var bottom_of_object2 = 0
+  var bottom_of_object3 = 0
   $(window).scroll( function(){
-
+    var animation1complete = false;
        /* Check the location of each desired element */
-       $('.row').each( function(i){
-
-           var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-           var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-           /* If the object is completely visible in the window, fade it it */
-           if( bottom_of_window > bottom_of_object-100 ){
-            var row = $(this);
-
-            row.find("#1").animate({'opacity':'1'},1500);
-            setTimeout(function(){
-              row.find("#2").animate({'opacity':'1'},1500);
-                setTimeout(function(){
-                  row.find("#3").animate({'opacity':'1'},1500);
-                },200);
-              },200);
-           }
-
-       });
-
+    bottom_of_object1 = row1.offset().top + row1.outerHeight();
+    bottom_of_object2 = row2.offset().top + row2.outerHeight();
+    bottom_of_object3 = row3.offset().top + row3.outerHeight();
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    /* If the object is completely visible in the window, fade it it */
+    if( animation1complete != true && bottom_of_window > bottom_of_object1-100 ){
+      row1.find("#1").animate({'opacity':'1'},1500);
+        setTimeout(function(){
+          row1.find("#2").animate({'opacity':'1'},1500);
+          setTimeout(function(){
+            row1.find("#3").animate({'opacity':'1'},1500);
+            animation1complete = true;
+          },200);
+      },200);
+    }
+    if(animation2complete != true && bottom_of_window > bottom_of_object2-100 ){
+      row2.find("#1").animate({'opacity':'1'},1500);
+        setTimeout(function(){
+          row2.find("#2").animate({'opacity':'1'},1500);
+          setTimeout(function(){
+            row2.find("#3").animate({'opacity':'1'},1500);
+            animation2complete = true;
+          },200);
+      },200);
+    }
+    if(animation3complete != true && bottom_of_window > bottom_of_object3-300 ){
+      $(jRows).each(function(i,el){
+        el.style.webkitAnimationPlayState = "running";
+      })
+      animation3complete = true;
+    }
    });
 });
 

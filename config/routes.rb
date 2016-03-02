@@ -7,13 +7,11 @@ Rails.application.routes.draw do
   post '/check_user' => 'users#check_user', :as => 'check_user'
   root 'client#home'
 
-  get 'client/home'
+  get '/about' => 'client#about', :as => 'about'
 
-  get 'client/about'
+  get '/portfolio' => 'client#portfolio', :as => 'portfolio'
 
-  get 'client/portfolio'
-
-  get 'client/contact_me'
+  get '/contact_me' => 'client#contact_me', :as => 'contact_me'
 
   resources :articles
   resources :categories

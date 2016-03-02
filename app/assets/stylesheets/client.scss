@@ -1,13 +1,10 @@
 // Place all the styles related to the Client controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@media only screen and (max-width: 500px) {
-  #header {
-    // height: 10%;
-  display: none;
 
-  }
-}
+
+
+
 .home, .portfolio-page, .articles-page, .contact-me, .about {
     font-family: 'Oxygen',sans-serif;
     // height: 500%;
@@ -30,62 +27,11 @@
 
 
 
-  #header {
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: bold;
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    height: 3em;
-    background-color: #408000;
-    .logo {
-      color: white;
-      float: left;
-      position: fixed;
-      text-align: center;
-    }
-
-    a {
-      i {
-        margin: .25em;
-        font-size: 200%;
-      }
-    }
-    .header-links {
-      font-weight: bold;
-      font-size: 120%;
-      margin-top: 1em;
-      float: right;
-      :hover {
-        border-bottom-width: 4px;
-        border-bottom-style: solid;
-        border-bottom-color: #5B5B5B;
-        // height: 3em;
-        // background-color: #A1A1A1;
-        a {
-          // background-color: #A1A1A1;
-          // color: #008000;
-
-        }
-      }
-      .link-container {
-        display: inline-block;
-        a {
-          color: #ffffff;
-          position: inline-block;
-          margin: 1em;
-          text-decoration: none;
-          margin-bottom: 1em;
-        }
-      }
-    }
-  }
 
 
 
 
   // Part 1 of Home Page
-
 
 
 
@@ -286,7 +232,7 @@
     }
     #social-media {
       background-color: #2E2F2E;
-      position: absolute;
+      position: fixed;
       width: 100%;
       bottom: 0;
     }
@@ -597,7 +543,6 @@
     }
 
   }
-
 }
 
 .home {

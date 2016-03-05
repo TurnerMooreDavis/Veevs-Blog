@@ -44,6 +44,9 @@ $(function clickIcon(){
 });
 
 $(function initialize(){
+  if ($('.portfolio-page, .contact-me, .about').length > 0) {
+    $('#header').show();
+  }
   $('#page1').fadeTo(2500, 0.6);
   $('.title').fadeTo(2500, 1, function(){
     $('#creativity').fadeTo(1300,1,function(){
@@ -59,50 +62,42 @@ $(function initialize(){
 });
 
 $(function fadeInShortCards(){
-  var jRows = document.getElementsByClassName("tall card");
-  $(jRows).each(function(i,el){
+  var jCards = document.getElementsByClassName("tall card");
+  $(jCards).each(function(i,el){
     el.style.webkitAnimationPlayState = "paused";
-  })
-  var row1 = $('.row.short.1');
-  var row2 = $('.row.short.2');
-  var row3 = $('.row.tall');
+  });
+
   var animation1complete = false;
   var animation2complete = false;
-  var animation3complete = false;
-  bottom_of_object1 = row1.offset().top + row1.outerHeight();
-  bottom_of_object2 = row2.offset().top + row2.outerHeight();
-  bottom_of_object3 = row3.offset().top + row3.outerHeight();
   $(window).scroll( function(){
-       /* Check the location of each desired element */
     var bottom_of_window = $(window).scrollTop() + $(window).height();
+       /* Check the location of each desired element */
     /* If the object is completely visible in the window, fade it it */
-    if( animation1complete != true && bottom_of_window > bottom_of_object1-100 ){
-      row1.find("#1").animate({'opacity':'1'},1500);
-        setTimeout(function(){
-          row1.find("#2").animate({'opacity':'1'},1500);
-          setTimeout(function(){
-            row1.find("#3").animate({'opacity':'1'},1500);
+    if (animation1complete != true) {
+      $('.card.short').each(function(el){
+        var card = $(this);
+        var bottomOfCard = card.offset().top + card.outerHeight();
+        if(bottom_of_window > bottomOfCard-100 ){
+          card.animate({'opacity':'1'},1500);
+          if (card.attr('id') == "6"){
             animation1complete = true;
-          },200);
-      },200);
+          }
+        }
+      });
     }
-    if(animation2complete != true && bottom_of_window > bottom_of_object2-100 ){
-      row2.find("#1").animate({'opacity':'1'},1500);
-        setTimeout(function(){
-          row2.find("#2").animate({'opacity':'1'},1500);
-          setTimeout(function(){
-            row2.find("#3").animate({'opacity':'1'},1500);
-            animation2complete = true;
-          },200);
-      },200);
-    }
-    if(animation3complete != true && bottom_of_window > bottom_of_object3-300 ){
-      $(jRows).each(function(i,el){
+  if (animation2complete != true) {
+    $(jCards).each(function(i,el){
+      var card = $(this);
+      var bottomOfCard = card.offset().top + card.outerHeight();
+      if(bottom_of_window > bottomOfCard-150){
         el.style.webkitAnimationPlayState = "running";
-      })
-      animation3complete = true;
-    }
-   });
+        if (card.attr('id') == "3"){
+          animation2complete = true;
+        }
+      }
+    })
+  }
+  });
 });
 
 $(function displayQuality(){

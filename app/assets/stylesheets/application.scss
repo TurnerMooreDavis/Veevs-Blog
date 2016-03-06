@@ -19,6 +19,7 @@
 @media screen and (max-width: 660px) {
   .home #page1 {
       .razzle-dazzle {
+      top: 3em;
       position: relative;
       font-size: 80%;
       text-align: center;
@@ -40,7 +41,7 @@
       position: absolute;
     }
   }
-  .about .about-container .about-raised {
+  .about .shared-container .shared-raised {
     width: 100%;
     margin: 0;
     border: none;
@@ -54,16 +55,40 @@
       }
     }
   }
-}
-@media screen and (max-width: 853px) {
-  .contact-me{
-    #social-media {
-      position:relative;
-      clear:both;
+  .categories .category-container {
+    max-width: 100%;
+    img {
+      max-width: 100%;
     }
   }
 }
+@media screen and (max-width: 1090px) {
+  .contact-me .shared-container .shared-raised {
+    margin: 0;
+    .inner-container .container{
+      text-align: center;
+      .left-column {
+        width: 100%;
+        max-width: none;
+      }
+      .right-column {
+        width: 100%;
+        max-width: none;
+        input[type=submit] {
+          float:none;
+        }
+      }
+    }
+  }
+  .contact-me #social-media {
+    position:relative;
+    clear:both;
+  }
+}
+
+
+
 body{
   margin: 0px;
-  height: 100%;
+  font-family: 'Oxygen', sans-serif;
 }

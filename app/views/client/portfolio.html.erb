@@ -1,22 +1,24 @@
 <div class='portfolio-page'>
-  <div id='portfolio-container'>
-    <h1 class='sub-header'>Here's my Portfolio Beiiiiiitch!!!s</h1>
-    <div class='container'>
-      <div class='categories'>
-        <% @categories.each do |cat| %>
-          <div class='category-container'>
-            <%= link_to category_path(cat), :class => "wrapper" do %>
-                <div class="text">
-                  <div class="bubble">
-                    <%= cat.description %>
+  <div class="shared-container">
+    <div class='shared-raised'>
+      <div class='inner-container'>
+        <h2>Here's my Portfolio Beiiiiiitch!!!s</h2>
+        <div class='categories'>
+          <% @categories.each do |cat| %>
+            <div class='category-container'>
+              <%= link_to category_path(cat), :class => "wrapper" do %>
+                  <div class="text">
+                    <div class="bubble">
+                      <%= cat.description %>
+                    </div>
                   </div>
-                </div>
-              <%= image_tag cat.image %>
-              </a>
-              <h2><%= cat.name %></h2>
-            <% end %>
-          </div>
-        <% end %>
+                <%= image_tag cat.image %>
+                </a>
+                <h2><%= cat.name %></h2>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

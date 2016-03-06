@@ -47,11 +47,12 @@ $(function initialize(){
   if ($('.portfolio-page, .contact-me, .about').length > 0) {
     $('#header').show();
   }
-  $('#page1').fadeTo(2500, 0.6);
+  $('#page1 img').fadeTo(2500, 0.2);
   $('.title').fadeTo(2500, 1, function(){
     $('#creativity').fadeTo(1300,1,function(){
       $('#craftsmanship').fadeTo(1150,1, function(){
         $('#consistancy').fadeTo(1000,1, function(){
+          $('#page1 img').fadeTo(2500, 0.5);
         });
       });
     });
@@ -118,5 +119,36 @@ $(function displayQuality(){
   $('.right-column ul').on('mouseleave', function(){
     $('.left-column img').animate({'opacity': '1'},400);
     $('.left-column .quality').animate({'opacity': '0'},400);
+  });
+});
+function drawWords(text){
+  var canvas = document.querySelector("canvas");
+  var ctx = document.querySelector("canvas").getContext("2d"),
+      dashLen = 220, dashOffset = dashLen, speed = 60,
+      txt = text, x = 30, i = 0;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.font = "Oxygen, san-serif";
+  ctx.lineWidth = 1; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
+  ctx.strokeStyle = ctx.fillStyle = "#408000";
+
+  (function loop() {
+    ctx.clearRect(x, 0, 60, 150);
+    ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
+    dashOffset -= speed;                                         // reduce dash length
+    ctx.strokeText(txt[i], x, 90);                               // stroke letter
+
+    if (dashOffset > 0) requestAnimationFrame(loop);             // animate
+    else {
+      ctx.fillText(txt[i], x, 90);                               // fill final letter
+      dashOffset = dashLen;                                      // prep next char
+      x += ctx.measureText(txt[i++]).width + ctx.lineWidth;
+      if (i < txt.length) requestAnimationFrame(loop);
+    }
+  })()
+
+}
+$(function triggerDrawWords(){
+  $('#page3 .right-column li').on('click',function(){
+    drawWords($(this).attr('data-quality-text'));
   });
 });

@@ -14,9 +14,9 @@
 
   .razzle-dazzle {
     position: absolute;
-    top: 3em;
+    top: 6em;
     background-size: cover;
-    z-index: 5;
+    z-index: 10000;
     text-align: center;
     height: 100%;
     width: 50%;
@@ -69,16 +69,18 @@
     background-color: white;
     text-align: center;
     .column-container {
+      display: inline-block;
+      text-align: center;
+      max-width: 75em;
       margin-top: 5em;
       position: relative;
-      margin-left: auto;
-      margin-right: auto;
       .card {
+        vertical-align: top;
         background-color: #f4fff4;
         opacity: 0;
         border-radius: 2%;
-        width: 17em;
-        height: 18em;
+        width: 20em;
+        height: 20em;
         box-shadow: 10px 10px 5px #888888;
         display: inline-block;
         padding: 1em;
@@ -88,7 +90,7 @@
           color: #408000;
         }
         p {
-          font-size:120%;
+          font-size:100%;
         }
         h1 {
           font-family: 'Julius Sans One', sans-serif;
@@ -248,61 +250,19 @@
 
 
   // Contact Me page
-
-
   .contact-me {
-    position: relative;
-    margin-top: 4em;
-    h1 {
-      text-align: center;
+    .left-column {
+      max-width: 20em;
+      display:inline-block;
     }
-    .container {
-      width: 100%;
-      text-align: center;
-      .right-column {
-        position: relative;
-        top: 0px;
-        font-size: 120%;
-        text-align: left;
-        display: inline-block;
-        max-width: 20em;
-        li {
-          // margin: 2em;
-          font-family: 'Julius Sans One', sans-serif;
-          font-weight: bold;
-          padding: 2em;
-          border-radius: 2%;
-          // &:hover{
-          //   cursor: pointer;
-          //   background-colors: #2E2F2E;
-          //   color: white;
-          // }
-        }
-      }
-      .left-column {
-        display: inline-block;
-        max-width: 30em;
-
-        img {
-          width: 100%;
-          z-index: -2000;
-        }
-
-        .quality {
-          opacity: 0;
-          font-size: 200%;
-          position: absolute;
-          top: 5em;
-          margin-right: 20em;
-          width: 12em;
-        }
-
-        p {
-          margin: 2em;
-        }
-      }
+    .right-column{
+      max-width: 20em;
+      display: inline-block;
+      float:right;
     }
+  }
     .contact-form {
+      display: inline-block;
       // font-size: 80%;
       .contact-entry {
         margin: 1em;
@@ -338,7 +298,7 @@
         }
       }
     }
-  }
+
 
 
 
@@ -426,30 +386,20 @@
 
   .portfolio-info {
     text-align: center;
-    width: 50em;
-    height: 15em;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em;
   }
   #portfolio-container {
     background-color: white;
   }
   .categories {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 
     .category-container {
       text-align: center;
       display: inline-block;
       width: 20em;
-      height: 20em;
-      margin-left: auto;
-      margin-right: auto;
       img {
-        width: 20em;
-        margin-right: auto;
-        margin-left: auto;
+        max-width: 15em;
         z-index:1;
         // border-radius: 50%;
         background-color: #ffffff;
@@ -458,15 +408,15 @@
       .wrapper {
           position: relative;
           padding: 0;
-          width:256px;
+          width: 100%;
           display:inline-block;
       }
       .text {
           position: absolute;
           color: #5B5B5B;
           background-color:rgba(255,255,255,0.8);
-          width: 256px;
-          height: 256px;
+          width: 100%;
+          height: 100%;
           text-align: center;
           z-index: 10;
           opacity: 0;
@@ -496,34 +446,38 @@
   // About page
 
 
-  .about-container{
+  .shared-container{
     margin-top: 3em;
     width: 100%;
     text-align: center;
-    .about-raised {
-      margin:5em;
+    .shared-raised {
+      margin:3em;
+      margin-bottom: 5em;
       .inner-container {
         padding: 1em;
         overflow: hidden;
         position: relative;
         text-align: left;
         font-size: 150%;
-        img {
-          margin: 1em;
-          float: left;
-          clear: right;
-          top: 0px;
-          left: 0px;
-          display: inline-block;
-          width:30%;
-        }
         p {
           display: inline-block;
         }
         h2 {
           text-align: center;
         }
+
       }
+    }
+  }
+  .about .shared-container .shared-raised .inner-container{
+    img {
+      margin: 1em;
+      float: left;
+      clear: right;
+      top: 0px;
+      left: 0px;
+      display: inline-block;
+      width:30%;
     }
   }
 

@@ -68,11 +68,6 @@
 
     .article-contents {
       margin: 0;
-      .article-image {
-        img {
-          width: 40em;
-        }
-      }
     }
   }
 }
@@ -97,6 +92,23 @@
   .contact-me #social-media {
     position:relative;
     clear:both;
+  }
+}
+@media screen and (max-width: 400px) {
+
+  .home #page2 .column-container {
+    .card {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+    .home #page4 .column-container {
+      .card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
   }
 }
 

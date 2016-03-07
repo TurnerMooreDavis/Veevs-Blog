@@ -3,7 +3,7 @@
   <h1><%= @category.name %> Articles </h1>
 </div>
   <div class="articles-container">
-    <% @articles.each_with_index do |article, i|%>
+    <% @articles.each_with_index do |article, i| %>
       <% if i==0 %>
       <div class="article-title" onClick="toggleArticle('<%= article.id %>')">
         <span class="article-name"><%=article.name %></span>

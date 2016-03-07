@@ -61,6 +61,20 @@
       max-width: 100%;
     }
   }
+  .articles-container {
+    width: 100%;
+    margin-left: none;
+    margin-right: none;
+
+    .article-contents {
+      margin: 0;
+      .article-image {
+        img {
+          width: 40em;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 1090px) {
   .contact-me .shared-container .shared-raised {

@@ -193,13 +193,13 @@
 
     .container {
       width: 100%;
-      text-align: center;
       img {
         max-width: 100%;
-        border-top-left-radius: 100%;
-        border-bottom-left-radius: 100%;
+        // border-top-left-radius: 100%;
+        // border-bottom-left-radius: 100%;
       }
       .right-column {
+        float: right;
         vertical-align: top;
         position: relative;
         top: 0px;
@@ -221,6 +221,7 @@
         }
       }
       .left-column {
+
         vertical-align: top;
         display: inline-block;
         max-width: 35em;
@@ -324,7 +325,7 @@
     width: 85%;
     margin-left:auto;
     margin-right: auto;
-    
+
     .article-title {
       width: 100%;
       text-align: center;

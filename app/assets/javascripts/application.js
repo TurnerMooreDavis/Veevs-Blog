@@ -120,37 +120,39 @@ $(function displayQuality(){
   //   $('.left-column .quality').animate({'opacity': '0'},400);
   // });
 });
-function drawWords(text){
-  var canvas = document.querySelector("canvas");
-  var ctx = document.querySelector("canvas").getContext("2d"),
-      dashLen = 220, dashOffset = dashLen, speed = 100,
-      txt = text, x = 5, i = 0;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.font = "Oxygen, san-serif";
-  ctx.lineWidth = 1; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
-  ctx.strokeStyle = ctx.fillStyle = "#408000";
 
-  (function loop() {
-    ctx.clearRect(x, 0, 60, 150);
-    ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
-    dashOffset -= speed;                                         // reduce dash length
-    ctx.strokeText(txt[i], x, 90);                               // stroke letter
 
-    if (dashOffset > 0) requestAnimationFrame(loop);             // animate
-    else {
-      ctx.fillText(txt[i], x, 90);                               // fill final letter
-      dashOffset = dashLen;                                      // prep next char
-      x += ctx.measureText(txt[i++]).width + ctx.lineWidth;
-      if (i < txt.length) requestAnimationFrame(loop);
-    }
-  })()
-
-}
-$(function triggerDrawWords(){
-  $('#page3 .right-column li').on('click',function(){
-    var text = $(this).attr('data-quality-text')
-    $('.left-column img').animate({'opacity': '.3'},400,function(){
-      drawWords(text);
-    });
-  });
-});
+// function drawWords(text){
+//   var canvas = document.querySelector("canvas");
+//   var ctx = document.querySelector("canvas").getContext("2d"),
+//       dashLen = 220, dashOffset = dashLen, speed = 300,
+//       txt = text, x = 5, i = 0;
+//   ctx.clearRect(0, 0, canvas.width, canvas.height);
+//   ctx.font = "Oxygen, san-serif";
+//   ctx.lineWidth = 1; ctx.lineJoin = "round"; ctx.globalAlpha = 2/3;
+//   ctx.strokeStyle = ctx.fillStyle = "#408000";
+//
+//   (function loop() {
+//     ctx.clearRect(x, 0, 60, 150);
+//     ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
+//     dashOffset -= speed;                                         // reduce dash length
+//     ctx.strokeText(txt[i], x, 90);                               // stroke letter
+//
+//     if (dashOffset > 0) requestAnimationFrame(loop);             // animate
+//     else {
+//       ctx.fillText(txt[i], x, 90);                               // fill final letter
+//       dashOffset = dashLen;                                      // prep next char
+//       x += ctx.measureText(txt[i++]).width + ctx.lineWidth;
+//       if (i < txt.length) requestAnimationFrame(loop);
+//     }
+//   })()
+//
+// }
+// $(function triggerDrawWords(){
+//   $('#page3 .right-column li').on('click',function(){
+//     var text = $(this).attr('data-quality-text')
+//     $('.left-column img').animate({'opacity': '.3'},400,function(){
+//       drawWords(text);
+//     });
+//   });
+// });

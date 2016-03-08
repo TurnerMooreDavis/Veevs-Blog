@@ -213,11 +213,11 @@
           font-weight: bold;
           padding: 2em;
           border-radius: 2%;
-          // &:hover{
-          //   cursor: pointer;
-          //   background-color: #2E2F2E;
-          //   color: white;
-          // }
+          &:hover{
+            cursor: pointer;
+            background-color: #2E2F2E;
+            color: white;
+          }
         }
       }
       .left-column {
@@ -230,13 +230,14 @@
           width: 100%;
           z-index: -2000;
         }
-        canvas {
-          transform: translateY(+50%);
+        .quality {
+          opacity: 0;
           position: absolute;
-          top: 0;
+          bottom: 0;
           left: 0;
           z-index: 2000;
           width: 100%;
+          height: 50%;
         }
 
         p {

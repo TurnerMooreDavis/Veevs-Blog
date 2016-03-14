@@ -101,6 +101,10 @@
       }
     }
   }
+  #page3 h1 {
+    font-size: 250%;
+    padding-top: 1.5em;
+  }
   .contact-me #social-media {
     position:relative;
     clear:both;
@@ -121,6 +125,9 @@
         margin-left: 0;
         margin-right: 0;
       }
+  }
+  #page3 h1 {
+    font-size: 150%;
   }
 }
 @media screen and (max-width: 1090px) {

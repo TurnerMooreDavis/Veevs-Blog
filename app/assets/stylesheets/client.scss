@@ -103,6 +103,7 @@
         }
 
         &.tall{
+          margin-bottom: 4em;
           background-color: white;
           opacity: 1;
           box-shadow: none;
@@ -174,15 +175,15 @@
     background-color: #DFDFDF;
 
     h1 {
+      font-size: 350%;
       text-align: center;
       font-family: 'Julius Sans One', sans-serif;
       font-weight: bold;
       color: #408000;
       padding: 0;
-      padding-top: 2em;
-      margin: 0;
+      padding-top: 2.5em;
       background-color: white;
-      height: 5em;
+      height: 4em;
     }
 
     h1.sub-header {

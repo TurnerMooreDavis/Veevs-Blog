@@ -95,6 +95,8 @@
       .right-column {
         width: 100%;
         max-width: none;
+        float: none;
+        text-align: center;
         input[type=submit] {
           float:none;
         }
@@ -138,7 +140,27 @@
     }
   }
 }
-
+@media screen and (max-width: 1270px){
+  .contact-me .shared-container .shared-raised {
+    margin: 0;
+    .inner-container .container{
+      text-align: center;
+      .left-column {
+        width: 100%;
+        max-width: none;
+      }
+      .right-column {
+        width: 100%;
+        max-width: none;
+        float: none;
+        text-align: center;
+        input[type=submit] {
+          float:none;
+        }
+      }
+    }
+  }
+}
 
 
 

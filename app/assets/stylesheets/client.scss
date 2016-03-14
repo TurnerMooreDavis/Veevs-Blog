@@ -212,16 +212,20 @@
         text-align: left;
         display: inline-block;
         max-width: 20em;
-        li {
-          // margin: 2em;
-          font-family: 'Julius Sans One', sans-serif;
-          font-weight: bold;
-          padding: 2em;
-          border-radius: 2%;
-          &:hover{
-            cursor: pointer;
-            background-color: #2E2F2E;
-            color: white;
+        ul {
+          li {
+            list-style-image: url('/checkICON.png');
+            // margin: 2em;
+            color: #408000;
+            font-family: 'Julius Sans One', sans-serif;
+            font-weight: bold;
+            padding: 2em;
+            border-radius: 2%;
+            &:hover{
+              cursor: pointer;
+              background-color: #2E2F2E;
+              color: white;
+            }
           }
         }
       }

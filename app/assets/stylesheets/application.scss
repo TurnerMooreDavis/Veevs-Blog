@@ -53,6 +53,16 @@
       margin-bottom: 1em;
       clear: both;
       }
+      .container {
+        .left-column {
+          width: 100%;
+          float:none;
+        }
+        .right-column {
+          width: 100%;
+          float:none;
+        }
+      }
     }
   }
   .categories .category-container {

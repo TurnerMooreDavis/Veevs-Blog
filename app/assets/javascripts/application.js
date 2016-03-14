@@ -35,6 +35,22 @@ function toggleArticle(articleId) {
   $("#"+articleId+"-collapse .arrowUp").toggle();
   $("#"+articleId+"-collapse .arrowDown").toggle();
 }
+$(function mobileHeaderSlideDown(){
+  var mobile = $('.mobile-links');
+  $('.mobile-hamburger').on('click',function(){
+    console.log('clicked');
+    if (mobile.css('opacity') == "0") {
+      mobile.animate({'opacity':'1'},500);
+    } else {
+      mobile.animate({'opacity':'0'},500);
+    }
+  });
+  $(window).on("scroll", function(){
+    if (mobile.css('opacity') == "1") {
+      mobile.animate({'opacity':'0'},500);
+    }
+  });
+});
 
 $(function clickIcon(){
   $('.icon').on('click',function(){

@@ -21,18 +21,11 @@
       <%= link_to "Blog", 'https://contycontent.wordpress.com/' %>
     </div>
   </div>
+  <div class="mobile-hamburger"><i class="fa fa-bars fa-3x"></i></div>
   <div class='mobile-links'>
-    <%= link_to about_path  do %>
-      <i class="fa fa-user fa-3x"></i>
-    <% end %>
-    <%= link_to  portfolio_path  do %>
-      <i class="fa fa-book fa-3x"></i>
-    <% end %>
-    <%= link_to contact_me_path  do %>
-      <i class="fa fa-envelope fa-3x"></i>
-    <% end %>
-    <%= link_to 'https://contycontent.wordpress.com/' do %>
-      <i class="fa fa-newspaper-o fa-3x"></i>
-    <% end %>
+    <%= link_to "About", about_path %>
+    <%= link_to "Portfolio", portfolio_path %>
+    <%= link_to "Contact Me", contact_me_path  %>
+    <%= link_to "Blog", 'https://contycontent.wordpress.com/' %>
   </div>
 </div>

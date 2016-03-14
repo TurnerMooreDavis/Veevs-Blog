@@ -527,14 +527,26 @@
     }
   }
   .mobile-links {
-    display: none;
-    float:right;
+    width: 100%;
+    background-color: #408000;
+    display: inline-block;
+    opacity: 0;
     a {
-      color: #408000;
-      i {
-        color: white;
-      }
+      margin: .3em;
+      color: white;
+      float: left;
+      width: 100%;
     }
+  }
+  .mobile-hamburger {
+    display: none;
+    color: white;
+    i {
+      margin: .25em;
+      font-size: 200%;
+    }
+    // display: none;
+    float: right;
   }
   .header-links {
     font-weight: bold;

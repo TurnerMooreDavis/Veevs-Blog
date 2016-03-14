@@ -484,7 +484,23 @@
         h2 {
           text-align: center;
         }
+        .container {
+          margin-top: 3em;
+          clear: both;
+          .right-column {
+            float: right;
+            display: inline-block;
+            max-width: 20em;
+            position: relative;
+          }
+          .left-column {
 
+            vertical-align: top;
+            display: inline-block;
+            max-width: 35em;
+            position:relative;
+          }
+        }
       }
     }
   }

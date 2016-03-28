@@ -1,5 +1,6 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.contycontent.com"
+SitemapGenerator::Sitemap.public_path = 'tmp/sitemaps/'
 
 SitemapGenerator::Sitemap.create do
   add '/contact_me'

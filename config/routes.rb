@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get '/contact_me' => 'client#contact_me', :as => 'contact_me'
 
+  get '/blog' => 'client#blog', :as => 'blog'
+
   resources :articles
   resources :categories
   # The priority is based upon order of creation: first created -> highest priority.

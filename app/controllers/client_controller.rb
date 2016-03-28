@@ -12,4 +12,8 @@ class ClientController < ApplicationController
   def portfolio
     @categories = Category.all
   end
+
+  def blog
+    redirect_to 'https://contycontent.wordpress.com/'
+  end
 end

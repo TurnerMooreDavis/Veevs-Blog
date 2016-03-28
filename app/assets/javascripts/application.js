@@ -107,7 +107,7 @@ $(function fadeInShortCards(){
     $(jCards).each(function(i,el){
       var card = $(this);
       var bottomOfCard = card.offset().top + card.outerHeight();
-      if(bottom_of_window > bottomOfCard){
+      if(bottom_of_window > bottomOfCard-250){
         el.style.webkitAnimationPlayState = "running";
         if (card.attr('id') == "3"){
           animation2complete = true;

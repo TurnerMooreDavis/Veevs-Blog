@@ -1,6 +1,7 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "http://www.contycontent.com"
 SitemapGenerator::Sitemap.sitemaps_path = 'shared/'
+SitemapGenerator::Sitemap.sitemaps_host = "http://www.contycontent.com/shared"
 SitemapGenerator::Sitemap.create do
   add '/contact_me'
   add '/portfolio'

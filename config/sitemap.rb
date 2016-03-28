@@ -2,10 +2,10 @@
 SitemapGenerator::Sitemap.default_host = "http://www.contycontent.com"
 
 SitemapGenerator::Sitemap.create do
-  Add '/contact_me'
-  Add '/portfolio'
-  Add '/about'
-  Add '/blog'
+  add '/contact_me'
+  add '/portfolio'
+  add '/about'
+  add '/blog'
 
   Category.find_each do |category|
     add category_path(category), :lastmod => category.updated_at

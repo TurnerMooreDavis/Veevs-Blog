@@ -27,7 +27,7 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
       xml.priority(0.9)
   }
 
-  categories.each do |p|
+  @categories.each do |p|
     xml.url {
       xml.loc("http:/contycontent.com/categories/#{p.id.to_s}")
       xml.changefreq("weekly")

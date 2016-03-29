@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :categories
+  get "sitemap.xml" => "sitemaps#index", :format => "xml", :as => :sitemap
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

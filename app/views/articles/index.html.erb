@@ -21,7 +21,7 @@
         <td><%= article.descriptions %></td>
         <td><%= article.published_link %></td>
         <td><%= link_to "attachment", article.attachment.url %></td>
-        <td><%= article.category_id %></td>
+        <td><%= article.category.name %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>

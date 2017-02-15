@@ -175,8 +175,10 @@
 
   #page3 {
     height: 20%;
-    width: 100%;
+    width: 80%;
     background-color: #DFDFDF;
+    margin-right: auto;
+    margin-left: auto;
 
     h1 {
       font-size: 350%;
@@ -236,6 +238,7 @@
         max-width: 35em;
         position:relative;
         img {
+          border-radius: 50%;
           width: 100%;
           z-index: -2000;
         }
@@ -533,7 +536,7 @@
   left: 0px;
   z-index: 1000;
   width: 100%;
-  height: 3em;
+  height: 3.5em;
   background-color: #408000;
   .logo {
     color: white;
